@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 import { DisclaimerProvider, useDisclaimer } from "./context/DisclaimerContext";
+import { WelcomeModalProvider } from "./context/WelcomeModalContext";
 import ScrollProgress from "./components/ScrollProgress";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -17,6 +18,7 @@ import ValuesSection from "./components/ValuesSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import Disclaimer from "./components/Disclaimer";
+import WelcomeModal from "./components/WelcomeModal";
 
 function AppContent() {
   const { disclaimerAccepted } = useDisclaimer();
@@ -39,6 +41,7 @@ function AppContent() {
         <ContactSection />
       </main>
       <Footer />
+      <WelcomeModal />
     </div>
   );
 }
@@ -67,30 +70,32 @@ export default function App() {
   return (
     <ThemeProvider>
       <DisclaimerProvider>
-        <Router>
-          <Routes>
-            <Route
-              path="/litigolawchamber"
-              element={
-                <ProtectedRoute>
-                  <AppContent />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/litigolawchamber/disclaimer"
-              element={
-                <DisclaimerRoute>
-                  <Disclaimer />
-                </DisclaimerRoute>
-              }
-            />
-            <Route
-              path="*"
-              element={<Navigate to="/litigolawchamber" replace />}
-            />
-          </Routes>
-        </Router>
+        <WelcomeModalProvider>
+          <Router>
+            <Routes>
+              <Route
+                path="/litigolawchamber"
+                element={
+                  <ProtectedRoute>
+                    <AppContent />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/litigolawchamber/disclaimer"
+                element={
+                  <DisclaimerRoute>
+                    <Disclaimer />
+                  </DisclaimerRoute>
+                }
+              />
+              <Route
+                path="*"
+                element={<Navigate to="/litigolawchamber" replace />}
+              />
+            </Routes>
+          </Router>
+        </WelcomeModalProvider>
       </DisclaimerProvider>
     </ThemeProvider>
   );
