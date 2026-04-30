@@ -68,26 +68,26 @@ export default function PracticeArea() {
         title="Practice Area"
         subtitle="Our Expertise"
       />
-      <div className="container mx-auto px-4 py-12">
+      <div className="py-16 lg:py-24 px-4 lg:px-12 gold-mesh-bg">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {data.map((item, index) => (
               <div
                 key={index}
-                className="border border-gray-600 dark:border-gray-400"
+                className="group bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 rounded-lg p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="flex flex-col items-center justify-center gap-5 p-5">
-                  <div className="p-2 w-16 h-16 border border-gray-600 dark:border-gray-400 bg-gray-100 dark:bg-gray-400 rounded-full flex items-center justify-center">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-20 h-20 rounded-full border-2 border-gold-400/20 bg-gold-400/5 flex items-center justify-center mb-6 group-hover:border-gold-400 group-hover:bg-gold-400/10 transition-all duration-300">
                     <img
                       src={item.icon}
                       alt={item.title}
-                      className=" object-contain"
+                      className="w-10 h-10 object-contain filter dark:invert"
                     />
                   </div>
-                  <h2 className="text-lg font-semibold text-gold-400 tracking-widest">
+                  <h3 className="font-display text-xl font-light dark:text-stone-100 text-stone-900 mb-4 group-hover:text-gold-400 transition-colors">
                     {item.title}
-                  </h2>
-                  <p className="text-justify text-gray-700 dark:text-gray-400 tracking-widest">
+                  </h3>
+                  <p className="text-sm dark:text-stone-400 text-stone-600 leading-relaxed font-light text-justify">
                     {item.description}
                   </p>
                 </div>
