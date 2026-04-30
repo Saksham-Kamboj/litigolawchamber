@@ -16,17 +16,119 @@ Litigo Law Chambers is a full service law firm, with associates in all the major
         title="About Us"
         subtitle="Our Story"
       />
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-7xl mx-auto text-justify">
-          <p className="text-lg text-gray-700 dark:text-gray-400 leading-relaxed mb-6">
-            {data.text1}
-          </p>
-          <p className="text-lg text-gray-700 dark:text-gray-400 leading-relaxed mb-6">
-            {data.text2}
-          </p>
-          <p className="text-lg text-gray-700 dark:text-gray-400 leading-relaxed">
-            {data.text3}
-          </p>
+      <div className="py-16 lg:py-24 px-4 lg:px-12 gold-mesh-bg">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Left: Main content */}
+            <div className="space-y-8">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="gold-line" />
+                <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
+                  Our Firm
+                </span>
+              </div>
+
+              <div className="space-y-6">
+                <p className="dark:text-stone-300 text-stone-700 leading-relaxed text-justify font-light">
+                  {data.text1}
+                </p>
+                <p className="dark:text-stone-300 text-stone-700 leading-relaxed text-justify font-light">
+                  {data.text2}
+                </p>
+                <p className="dark:text-stone-300 text-stone-700 leading-relaxed text-justify font-light">
+                  {data.text3}
+                </p>
+              </div>
+            </div>
+
+            {/* Right: Stats/Values section */}
+            <div className="space-y-8">
+              <div className="dark:bg-stone-900/60 bg-stone-100/60 p-8 border dark:border-stone-800 border-stone-200 rounded-lg">
+                <h3 className="font-display text-2xl font-light dark:text-stone-100 text-stone-900 mb-6">
+                  Our{" "}
+                  <span className="italic" style={{ color: "var(--gold)" }}>
+                    Values
+                  </span>
+                </h3>
+
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="w-2 h-2 rounded-full mt-2"
+                      style={{ backgroundColor: "var(--gold)" }}
+                    />
+                    <div>
+                      <h4 className="font-medium dark:text-stone-100 text-stone-900 mb-2">
+                        Excellence
+                      </h4>
+                      <p className="text-sm dark:text-stone-400 text-stone-600 leading-relaxed font-light">
+                        We strive to deliver the highest quality legal work with
+                        unwavering commitment to excellence.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="w-2 h-2 rounded-full mt-2"
+                      style={{ backgroundColor: "var(--gold)" }}
+                    />
+                    <div>
+                      <h4 className="font-medium dark:text-stone-100 text-stone-900 mb-2">
+                        Integrity
+                      </h4>
+                      <p className="text-sm dark:text-stone-400 text-stone-600 leading-relaxed font-light">
+                        Strong emphasis on ethics and professional conduct in
+                        all our legal services.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="w-2 h-2 rounded-full mt-2"
+                      style={{ backgroundColor: "var(--gold)" }}
+                    />
+                    <div>
+                      <h4 className="font-medium dark:text-stone-100 text-stone-900 mb-2">
+                        Dedication
+                      </h4>
+                      <p className="text-sm dark:text-stone-400 text-stone-600 leading-relaxed font-light">
+                        Committed to ensuring client satisfaction through
+                        dedicated legal representation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick stats */}
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center p-6 dark:bg-stone-900/60 bg-stone-100/60 border dark:border-stone-800 border-stone-200 rounded-lg">
+                  <div
+                    className="text-3xl font-light dark:text-stone-100 text-stone-900 mb-2"
+                    style={{ color: "var(--gold)" }}
+                  >
+                    8+
+                  </div>
+                  <div className="text-xs uppercase tracking-widest dark:text-stone-500 text-stone-500">
+                    Practice Areas
+                  </div>
+                </div>
+                <div className="text-center p-6 dark:bg-stone-900/60 bg-stone-100/60 border dark:border-stone-800 border-stone-200 rounded-lg">
+                  <div
+                    className="text-3xl font-light dark:text-stone-100 text-stone-900 mb-2"
+                    style={{ color: "var(--gold)" }}
+                  >
+                    100%
+                  </div>
+                  <div className="text-xs uppercase tracking-widest dark:text-stone-500 text-stone-500">
+                    Client Satisfaction
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
