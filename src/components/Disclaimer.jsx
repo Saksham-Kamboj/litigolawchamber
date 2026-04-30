@@ -17,7 +17,7 @@ export default function Disclaimer() {
 
   return (
     <div
-      className={`flex items-center justify-center px-4 py-12 ${isDark ? "bg-slate-950" : "bg-stone-50"}`}
+      className={`min-h-screen flex items-center justify-center px-4 py-12 ${isDark ? "bg-slate-950" : "bg-stone-50"}`}
     >
       <div className="max-w-4xl mx-auto">
         <div
@@ -43,7 +43,7 @@ export default function Disclaimer() {
           </div>
 
           {/* Disclaimer Content */}
-          <div className="space-y-4 dark:text-stone-300 text-stone-700 text-base leading-relaxed font-light">
+          <div className="space-y-4 dark:text-stone-300 text-stone-700 text-xs leading-relaxed font-light">
             <p>
               The Bar Council of India does not permit solicitation of work and
               advertising by legal practitioners. Litigo Law Chambers is,
