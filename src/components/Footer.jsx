@@ -1,15 +1,71 @@
+// Icon components
+const LocationIcon = () => (
+  <svg
+    className="w-4 h-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+    />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+    />
+  </svg>
+);
+
+const EmailIcon = () => (
+  <svg
+    className="w-4 h-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+    />
+  </svg>
+);
+
+const PhoneIcon = () => (
+  <svg
+    className="w-4 h-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+    />
+  </svg>
+);
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="py-10 border-t dark:border-stone-900 border-stone-200 dark:bg-slate-950 bg-stone-50 px-4 lg:px-12">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        {/* Logo mark */}
-        <div className="flex items-center gap-3">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-8">
+        {/* Left side - Logo and copyright */}
+        <div className="flex flex-col gap-4">
+          {/* Logo mark */}
           <div className="flex items-center gap-3">
             {/* LLC */}
             <div
-              className="font-display text-3xl font-bold tracking-wider"
+              className="font-display text-5xl font-bold tracking-wider"
               style={{ color: "var(--gold)" }}
             >
               LLC
@@ -17,7 +73,7 @@ export default function Footer() {
 
             {/* Vertical Line */}
             <div
-              className="w-px h-5"
+              className="w-px h-8"
               style={{ backgroundColor: "var(--gold)" }}
             />
 
@@ -25,7 +81,7 @@ export default function Footer() {
             <div className="flex flex-col">
               {/* LITIGO */}
               <div
-                className="font-display text-sm font-bold tracking-wider leading-tight"
+                className="font-display text-lg font-bold tracking-wider leading-tight"
                 style={{ color: "var(--gold)" }}
               >
                 LITIGO
@@ -33,33 +89,56 @@ export default function Footer() {
 
               {/* Horizontal Line */}
               <div
-                className="w-full h-px my-0.5"
+                className="w-full h-px my-1"
                 style={{ backgroundColor: "var(--gold)" }}
               />
 
               {/* LAW CHAMBERS */}
-              <div className="text-[8px] uppercase tracking-widest dark:text-stone-400 text-stone-500">
+              <div className="text-xs uppercase tracking-widest dark:text-stone-400 text-stone-500">
                 LAW CHAMBERS
               </div>
             </div>
           </div>
+
+          {/* Copyright */}
+          <div className="text-xs dark:text-stone-600 text-stone-400">
+            {currentYear} Litigo Law Chambers. All rights reserved. · Dehradun,
+            Uttarakhand, India
+          </div>
         </div>
 
-        <div className="text-xs dark:text-stone-600 text-stone-400 text-center">
-          {currentYear} Litigo Law Chambers. All rights reserved. · Dehradun,
-          Uttarakhand, India
-        </div>
+        {/* Right side - Contact information */}
+        <div className="flex flex-col gap-4 text-sm dark:text-stone-300 text-stone-600">
+          {/* Office Address */}
+          <div className="flex items-start gap-3">
+            <LocationIcon />
+            <div>
+              <span className="font-medium">Office:</span> 11-DS, 2nd Floor, PLS
+              Plaza, 58 Gandhi Road, Dehradun, Uttarakhand
+            </div>
+          </div>
 
-        <div className="flex gap-6">
-          {["#home", "#services", "#contact"].map((href) => (
+          {/* Email */}
+          <div className="flex items-center gap-3">
+            <EmailIcon />
             <a
-              key={href}
-              href={href}
-              className="text-xs uppercase tracking-widest dark:text-stone-600 text-stone-400 hover:text-gold-400 transition-colors"
+              href="mailto:naman@lawyer.com"
+              className="hover:text-gold-400 transition-colors"
             >
-              {href.replace("#", "")}
+              naman@lawyer.com
             </a>
-          ))}
+          </div>
+
+          {/* Phone */}
+          <div className="flex items-center gap-3">
+            <PhoneIcon />
+            <a
+              href="tel:+918126630631"
+              className="hover:text-gold-400 transition-colors"
+            >
+              +91 8126630631
+            </a>
+          </div>
         </div>
       </div>
     </footer>
