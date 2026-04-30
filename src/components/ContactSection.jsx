@@ -105,10 +105,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-24 lg:py-36 relative overflow-hidden px-4 lg:px-12"
-      style={{
-        background: "linear-gradient(135deg, #0a0d12 0%, #111419 100%)",
-      }}
+      className="py-24 lg:py-36 relative overflow-hidden px-4 lg:px-12 dark:bg-slate-950 bg-stone-50"
     >
       {/* Gold mesh bg */}
       <div
@@ -129,6 +126,27 @@ export default function ContactSection() {
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="gold-line" />
+            <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
+              Get In Touch
+            </span>
+            <div className="gold-line" />
+          </div>
+          <h2 className="font-display text-5xl lg:text-6xl font-light dark:text-stone-100 text-stone-900 mb-8 leading-tight">
+            Let's{" "}
+            <span className="italic" style={{ color: "var(--gold)" }}>
+              Connect
+            </span>
+          </h2>
+          <p className="dark:text-stone-400 text-stone-600 text-lg max-w-2xl mx-auto font-light">
+            Have a legal question or need assistance? Reach out to our team of
+            experienced lawyers. We're here to help you navigate your legal
+            challenges with expertise and care.
+          </p>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left: contact info */}
           <Reveal>
@@ -138,7 +156,7 @@ export default function ContactSection() {
                 Get In Touch
               </span>
             </div>
-            <h2 className="font-display text-5xl lg:text-6xl font-light text-stone-100 leading-tight mb-6">
+            <h2 className="font-display text-5xl lg:text-6xl font-light text-stone-800 dark:text-stone-100 leading-tight mb-6">
               Let's Discuss
               <br />
               <span className="italic" style={{ color: "var(--gold)" }}>
@@ -152,7 +170,7 @@ export default function ContactSection() {
 
             <div className="space-y-8">
               <ContactItem icon={<LocationIcon />} label="Chamber">
-                <address className="not-italic text-stone-300 font-light text-sm leading-relaxed">
+                <address className="not-italic dark:text-stone-300 text-stone-500 font-light text-sm leading-relaxed">
                   Opposite SDM Court, District Court Compound,
                   <br />
                   Dehradun, Uttarakhand
@@ -160,23 +178,23 @@ export default function ContactSection() {
               </ContactItem>
 
               <ContactItem icon={<BuildingIcon />} label="Office">
-                <address className="not-italic text-stone-300 font-light text-sm leading-relaxed">
+                <address className="not-italic dark:text-stone-300 text-stone-500 font-light text-sm leading-relaxed">
                   11-DS, 2nd Floor, PLS Plaza,
                   <br />
-                  58 Gandhi Road, Dehradun, Uttarakhand
+                  Gandhi Road, Dehradun
                 </address>
               </ContactItem>
 
               <ContactItem icon={<EmailIcon />} label="Email">
                 <a
                   href="mailto:naman@lawyer.com"
-                  className="text-stone-300 hover:text-gold-400 font-light text-sm transition-colors block"
+                  className="text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block dark:text-stone-300"
                 >
                   naman@lawyer.com
                 </a>
                 <a
                   href="mailto:litigolaw@gmail.com"
-                  className="text-stone-300 hover:text-gold-400 font-light text-sm transition-colors block"
+                  className="dark:text-stone-300 text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block"
                 >
                   litigolaw@gmail.com
                 </a>
@@ -185,15 +203,15 @@ export default function ContactSection() {
               <ContactItem icon={<PhoneIcon />} label="Phone">
                 <a
                   href="tel:+918126630631"
-                  className="text-stone-300 hover:text-gold-400 font-light text-sm transition-colors block"
+                  className="dark:text-stone-300 text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block"
                 >
-                  +91-8126630631
+                  +91 8126630631
                 </a>
                 <a
                   href="tel:+919868650636"
-                  className="text-stone-300 hover:text-gold-400 font-light text-sm transition-colors block"
+                  className="dark:text-stone-300 text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block"
                 >
-                  +91-9868650636
+                  +91 9868650636
                 </a>
               </ContactItem>
             </div>
@@ -201,13 +219,13 @@ export default function ContactSection() {
 
           {/* Right: Contact form */}
           <Reveal delay={150}>
-            <div className="bg-stone-900/60 p-10 border border-stone-800">
-              <h3 className="font-display text-2xl font-light text-stone-100 mb-8">
+            <div className="dark:bg-stone-900/60 bg-stone-100/60 p-10 border dark:border-stone-800 border-stone-200">
+              <h3 className="font-display text-2xl font-light dark:text-stone-100 text-stone-900 mb-8">
                 Send a Message
               </h3>
               <div className="space-y-5">
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-stone-500 mb-2">
+                  <label className="block text-xs uppercase tracking-widest dark:text-stone-500 text-stone-600 mb-2">
                     Full Name
                   </label>
                   <input
@@ -215,25 +233,25 @@ export default function ContactSection() {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 rounded-lg px-4 py-3 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
                     placeholder="Your name"
-                    className="w-full bg-transparent border border-stone-700 text-stone-200 placeholder-stone-600 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-stone-500 mb-2">
-                    Email
+                  <label className="block text-xs uppercase tracking-widest dark:text-stone-500 text-stone-600 mb-2">
+                    Email Address
                   </label>
                   <input
                     type="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 rounded-lg px-4 py-3 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
                     placeholder="your@email.com"
-                    className="w-full bg-transparent border border-stone-700 text-stone-200 placeholder-stone-600 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-stone-500 mb-2">
+                  <label className="block text-xs uppercase tracking-widest dark:text-stone-500 text-stone-600 mb-2">
                     Phone
                   </label>
                   <input
@@ -242,45 +260,43 @@ export default function ContactSection() {
                     value={form.phone}
                     onChange={handleChange}
                     placeholder="+91 XXXXX XXXXX"
-                    className="w-full bg-transparent border border-stone-700 text-stone-200 placeholder-stone-600 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors"
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-stone-500 mb-2">
-                    Matter Type
+                  <label className="block text-xs uppercase tracking-widest dark:text-stone-500 text-stone-600 mb-2">
+                    Area of Practice
                   </label>
-                  <select
+                  <input
+                    type="text"
                     name="area"
                     value={form.area}
                     onChange={handleChange}
-                    className="w-full bg-stone-900 border border-stone-700 text-stone-400 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors appearance-none"
-                  >
-                    <option value="">Select practice area</option>
-                    {PRACTICE_AREAS.map((a) => (
-                      <option key={a}>{a}</option>
-                    ))}
-                  </select>
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
+                    placeholder="e.g., Criminal Law, Family Law"
+                  />
                 </div>
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-stone-500 mb-2">
-                    Brief Description
+                  <label className="block text-xs uppercase tracking-widest dark:text-stone-500 text-stone-600 mb-2">
+                    Message
                   </label>
                   <textarea
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    rows={4}
-                    placeholder="Briefly describe your legal matter..."
-                    className="w-full bg-transparent border border-stone-700 text-stone-200 placeholder-stone-600 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 transition-colors resize-none"
+                    rows={5}
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all resize-none"
+                    placeholder="Tell us about your legal matter..."
                   />
                 </div>
                 <button
-                  className="w-full py-4 text-xs uppercase tracking-widest font-medium text-stone-950 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
+                  type="submit"
+                  className="w-full text-stone-900 px-8 py-4 rounded-lg font-medium transition-all hover:shadow-lg hover:-translate-y-0.5"
                   style={{ background: "var(--gold)" }}
                 >
-                  Send Enquiry
+                  Send Message
                 </button>
-                <p className="text-xs text-stone-600 text-center">
+                <p className="text-xs dark:text-stone-600 text-stone-500 text-center">
                   Your information is confidential and protected.
                 </p>
               </div>
