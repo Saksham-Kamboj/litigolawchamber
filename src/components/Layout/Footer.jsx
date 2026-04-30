@@ -1,4 +1,5 @@
-import { AUTHOR, LOGO } from "../data/siteData";
+import { Link } from "react-router-dom";
+import { AUTHOR, LOGO } from "../../data/siteData";
 
 // Icon components
 const LocationIcon = () => (
@@ -111,23 +112,23 @@ export default function Footer() {
           {/* Email */}
           <div className="flex items-center gap-3">
             <EmailIcon />
-            <a
-              href={`mailto:${AUTHOR.email}`}
+            <Link
+              to={`mailto:${AUTHOR.email}`}
               className="hover:text-gold-400 transition-colors"
             >
               {AUTHOR.email}
-            </a>
+            </Link>
           </div>
 
           {/* Phone */}
           <div className="flex items-center gap-3">
             <PhoneIcon />
-            <a
-              href={`tel:${AUTHOR.phone}`}
+            <Link
+              to={`tel:${AUTHOR.phone}`}
               className="hover:text-gold-400 transition-colors"
             >
               {AUTHOR.phone}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

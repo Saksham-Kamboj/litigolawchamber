@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { useTheme } from "../context/ThemeContext";
-import { CTA, NAV_LINKS } from "../data/siteData";
-import Logo from "./Logo";
+import { useTheme } from "../../context/ThemeContext";
+import { CTA, NAV_LINKS } from "../../data/siteData";
+import Logo from "../Logo";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const { isDark, toggleTheme } = useTheme();
@@ -31,13 +32,13 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="nav-link dark:text-stone-300 text-stone-600 hover:text-gold-400 dark:hover:text-gold-400 transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -79,12 +80,12 @@ export default function Navbar() {
             </button>
 
             {/* CTA */}
-            <a
-              href={CTA.href}
+            <Link
+              to={CTA.href}
               className="hidden lg:inline-flex items-center gap-2 px-5 py-2 border border-gold-400 text-xs text-gold-400 uppercase tracking-widest transition-all duration-300 hover:bg-gold-400 hover:text-stone-950"
             >
               {CTA.text}
-            </a>
+            </Link>
 
             {/* Hamburger */}
             <button
@@ -111,14 +112,14 @@ export default function Navbar() {
             className={`py-4 space-y-1 border-t ${isDark ? "border-stone-800" : "border-stone-200"}`}
           >
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 onClick={closeMenu}
                 className="block py-2.5 px-2 text-sm uppercase tracking-widest dark:text-stone-400 text-stone-600"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,5 +1,5 @@
-import { OUR_REACH } from "../data/siteData";
-import Reveal from "./Reveal";
+import { OUR_REACH } from "../../data/siteData";
+import Reveal from "../Reveal";
 
 export default function CourtsSection() {
   return (

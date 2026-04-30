@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Reveal from "./Reveal";
-import { CONTACT_DATA } from "../data/siteData";
+import Reveal from "../Reveal";
+import { CONTACT_DATA } from "../../data/siteData";
+import { Link } from "react-router-dom";
 
 function ContactItem({ icon, label, children }) {
   return (
@@ -179,13 +180,13 @@ export default function ContactSection() {
                   {item.type === "email" && (
                     <div className="space-y-1">
                       {item.content.map((emailItem, idx) => (
-                        <a
+                        <Link
                           key={idx}
-                          href={emailItem.href}
+                          to={emailItem.href}
                           className="text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block dark:text-stone-300"
                         >
                           {emailItem.email}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -194,13 +195,13 @@ export default function ContactSection() {
                   {item.type === "phone" && (
                     <div className="space-y-1">
                       {item.content.map((phoneItem, idx) => (
-                        <a
+                        <Link
                           key={idx}
-                          href={phoneItem.href}
+                          to={phoneItem.href}
                           className="text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block dark:text-stone-300"
                         >
                           {phoneItem.number}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}

@@ -1,5 +1,6 @@
-import { ABOUT_US, AUTHOR } from "../data/siteData";
-import Reveal from "./Reveal";
+import { Link } from "react-router-dom";
+import { ABOUT_US, AUTHOR } from "../../data/siteData";
+import Reveal from "../Reveal";
 
 export default function AboutSection() {
   return (
@@ -37,8 +38,8 @@ export default function AboutSection() {
 
             <Reveal delay={300}>
               <div className="mt-10">
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center gap-3 text-xs uppercase tracking-widest transition-colors"
                   style={{ color: "var(--gold)" }}
                 >
@@ -56,7 +57,7 @@ export default function AboutSection() {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </Reveal>
           </div>

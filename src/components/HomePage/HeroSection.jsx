@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { AUTHOR, LOGO, STATS, TAGLINE } from "../data/siteData";
+import { AUTHOR, LOGO, STATS, TAGLINE } from "../../data/siteData";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
@@ -82,8 +83,8 @@ export default function HeroSection() {
 
           {/* CTA */}
           <div className="flex flex-wrap gap-4" style={heroStyle(900)}>
-            <a
-              href="#services"
+            <Link
+              to="/services"
               className="inline-flex items-center gap-3 px-7 py-3.5 text-xs uppercase tracking-widest font-medium text-stone-950 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
               style={{ background: "var(--gold)" }}
             >
@@ -101,9 +102,9 @@ export default function HeroSection() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-3 px-7 py-3.5 text-xs uppercase tracking-widest font-medium transition-all duration-300 border hover:border-gold-400"
               style={{
                 borderColor: "rgba(201,168,76,0.3)",
@@ -111,7 +112,7 @@ export default function HeroSection() {
               }}
             >
               Free Consultation
-            </a>
+            </Link>
           </div>
         </div>
 

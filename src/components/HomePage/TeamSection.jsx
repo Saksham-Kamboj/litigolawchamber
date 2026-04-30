@@ -1,5 +1,5 @@
-import { TEAM_FOUNDER, TEAM_MEMBERS } from "../data/siteData";
-import Reveal from "./Reveal";
+import { TEAM_FOUNDER, TEAM_MEMBERS } from "../../data/siteData";
+import Reveal from "../Reveal";
 
 export default function TeamSection() {
   return (

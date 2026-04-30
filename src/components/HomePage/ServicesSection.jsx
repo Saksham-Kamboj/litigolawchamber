@@ -1,5 +1,5 @@
-import { SERVICES } from "../data/siteData";
-import Reveal from "./Reveal";
+import { SERVICES } from "../../data/siteData";
+import Reveal from "../Reveal";
 
 export default function ServicesSection() {
   return (

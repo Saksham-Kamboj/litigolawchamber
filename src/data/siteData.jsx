@@ -24,16 +24,14 @@ export const LOGO = {
 
 export const CTA = {
   text: "Consult Now",
-  href: "#contact",
+  href: "/contact",
 };
 
 export const NAV_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#courts", label: "Courts" },
-  { href: "#team", label: "Team" },
-  { href: "#values", label: "Values" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About Us" },
+  { href: "/practice-area", label: "Practice Area" },
+  { href: "/knowledge-gateway", label: "Knowledge Gateway" },
+  { href: "/our-team", label: "Our Team" },
 ];
 
 export const TAGLINE = {
@@ -71,7 +69,7 @@ export const ABOUT_US = {
 
   cta: {
     text: "Learn More About Us",
-    href: "#contact",
+    href: "/about",
   },
 
   quote: {

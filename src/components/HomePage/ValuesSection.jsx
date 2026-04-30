@@ -1,5 +1,5 @@
-import { VALUES, STRENGTHS } from "../data/siteData";
-import Reveal from "./Reveal";
+import { VALUES, STRENGTHS } from "../../data/siteData";
+import Reveal from "../Reveal";
 
 export default function ValuesSection() {
   return (

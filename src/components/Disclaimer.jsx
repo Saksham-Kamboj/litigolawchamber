@@ -14,7 +14,7 @@ export default function Disclaimer() {
   const handleAgree = () => {
     acceptDisclaimer();
     showWelcomeModal();
-    navigate("/litigolawchamber");
+    navigate("/litigolawchamber/home");
   };
 
   const handleDisagree = () => {
