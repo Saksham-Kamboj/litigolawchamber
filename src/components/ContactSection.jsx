@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { PRACTICE_AREAS } from "../data/siteData";
 import Reveal from "./Reveal";
 
 function ContactItem({ icon, label, children }) {
@@ -233,7 +232,7 @@ export default function ContactSection() {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 rounded-lg px-4 py-2 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-2 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
                     placeholder="Your name"
                   />
                 </div>
@@ -246,7 +245,7 @@ export default function ContactSection() {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 rounded-lg px-4 py-2 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-2 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -265,26 +264,13 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <label className="block text-xs uppercase tracking-widest dark:text-stone-500 text-stone-600 mb-2">
-                    Area of Practice
-                  </label>
-                  <input
-                    type="text"
-                    name="area"
-                    value={form.area}
-                    onChange={handleChange}
-                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-2 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
-                    placeholder="e.g., Criminal Law, Family Law"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs uppercase tracking-widest dark:text-stone-500 text-stone-600 mb-2">
                     Message
                   </label>
                   <textarea
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    rows={4}
+                    rows={6}
                     className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-2 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all resize-none"
                     placeholder="Tell us about your legal matter..."
                   />
