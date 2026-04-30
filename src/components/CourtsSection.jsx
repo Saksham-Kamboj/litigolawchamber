@@ -19,7 +19,7 @@ export default function CourtsSection() {
                 Tribunals
               </span>
             </h2>
-            <p className="mt-6 dark:text-stone-400 text-stone-600 font-light leading-relaxed">
+            <p className="mt-6 dark:text-stone-400 text-stone-600 font-light leading-relaxed text-justify">
               From the Supreme Court of India to specialized tribunals, our
               experienced team practices across the full spectrum of India's
               judicial hierarchy.

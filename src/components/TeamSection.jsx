@@ -43,7 +43,7 @@ export default function TeamSection() {
                 <div className="text-xs uppercase tracking-widest text-gold-400 mb-6">
                   {TEAM_FOUNDER.role}
                 </div>
-                <p className="dark:text-stone-400 text-stone-600 font-light leading-relaxed">
+                <p className="dark:text-stone-400 text-stone-600 font-light leading-relaxed text-justify">
                   {TEAM_FOUNDER.bio}
                 </p>
               </div>

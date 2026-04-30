@@ -27,7 +27,7 @@ export default function AboutSection() {
             </Reveal>
 
             <Reveal delay={200}>
-              <div className="space-y-5 dark:text-stone-400 text-stone-600 font-light leading-relaxed">
+              <div className="space-y-5 dark:text-stone-400 text-stone-600 font-light leading-relaxed text-justify">
                 <p>
                   Litigo Law Chambers is a dynamic law firm based in
                   Uttarakhand, India, constituted by a group of young and
@@ -89,7 +89,7 @@ export default function AboutSection() {
                 />
 
                 <div className="quote-mark mb-4">"</div>
-                <blockquote className="font-display text-2xl lg:text-3xl font-light italic dark:text-stone-200 text-stone-800 leading-snug mb-6">
+                <blockquote className="font-display text-2xl lg:text-3xl font-light italic dark:text-stone-200 text-stone-800 leading-snug mb-6 text-justify">
                   Our belief was that hard work and exploring new frontiers
                   would lead us to success.
                 </blockquote>

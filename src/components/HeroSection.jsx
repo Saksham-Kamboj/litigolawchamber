@@ -77,7 +77,7 @@ export default function HeroSection() {
 
           {/* Tagline */}
           <p
-            className="text-base lg:text-lg font-body dark:text-stone-400 text-stone-600 max-w-xl leading-relaxed mb-10"
+            className="text-base lg:text-lg font-body dark:text-stone-400 text-stone-600 max-w-xl leading-relaxed mb-10 text-justify"
             style={{ ...heroStyle(700), fontWeight: 300 }}
           >
             A new generation law firm delivering best quality legal work — with

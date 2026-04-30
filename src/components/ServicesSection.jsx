@@ -46,7 +46,7 @@ export default function ServicesSection() {
                 <h3 className="font-display text-2xl font-light dark:text-stone-100 text-stone-900 mb-3 group-hover:text-gold-400 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-sm dark:text-stone-500 text-stone-500 leading-relaxed font-light">
+                <p className="text-sm dark:text-stone-500 text-stone-500 leading-relaxed font-light text-justify">
                   {service.desc}
                 </p>
                 <div
