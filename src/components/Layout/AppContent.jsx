@@ -8,7 +8,9 @@ export default function AppContent({ children }) {
     <div className="dark:bg-slate-950 dark:text-stone-100 bg-white text-stone-900 font-body">
       <ScrollProgress />
       <Navbar />
-      <main className="min-h-[80vh]">{children}</main>
+      <main className="min-h-[calc(100vh-9rem)] lg:min-h-[calc(100vh-10rem)]">
+        {children}
+      </main>
       <Footer />
       <WelcomeModal />
     </div>
