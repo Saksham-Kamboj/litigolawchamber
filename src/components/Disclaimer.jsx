@@ -1,14 +1,16 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { DisclaimerContext } from "../context/DisclaimerContext";
 import { useTheme } from "../context/ThemeContext";
-import Logo from "./Logo";
 
 export default function Disclaimer() {
   const { acceptDisclaimer } = useContext(DisclaimerContext);
   const { isDark } = useTheme();
+  const navigate = useNavigate();
 
   const handleAgree = () => {
     acceptDisclaimer();
+    navigate("/litigolawchamber");
   };
 
   const handleDisagree = () => {

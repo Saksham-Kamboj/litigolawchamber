@@ -43,16 +43,47 @@ function AppContent() {
   );
 }
 
+function ProtectedRoute({ children }) {
+  const { disclaimerAccepted } = useDisclaimer();
+
+  if (!disclaimerAccepted) {
+    return <Navigate to="/litigolawchamber/disclaimer" replace />;
+  }
+
+  return children;
+}
+
+function DisclaimerRoute({ children }) {
+  const { disclaimerAccepted } = useDisclaimer();
+
+  if (disclaimerAccepted) {
+    return <Navigate to="/litigolawchamber" replace />;
+  }
+
+  return children;
+}
+
 export default function App() {
   return (
     <ThemeProvider>
       <DisclaimerProvider>
         <Router>
           <Routes>
-            <Route path="/litigolawchamber" element={<AppContent />} />
+            <Route
+              path="/litigolawchamber"
+              element={
+                <ProtectedRoute>
+                  <AppContent />
+                </ProtectedRoute>
+              }
+            />
             <Route
               path="/litigolawchamber/disclaimer"
-              element={<Disclaimer />}
+              element={
+                <DisclaimerRoute>
+                  <Disclaimer />
+                </DisclaimerRoute>
+              }
             />
             <Route
               path="*"
