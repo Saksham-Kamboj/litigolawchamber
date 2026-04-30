@@ -219,11 +219,11 @@ export default function ContactSection() {
 
           {/* Right: Contact form */}
           <Reveal delay={150}>
-            <div className="dark:bg-stone-900/60 bg-stone-100/60 p-10 border dark:border-stone-800 border-stone-200">
-              <h3 className="font-display text-2xl font-light dark:text-stone-100 text-stone-900 mb-8">
+            <div className="dark:bg-stone-900/60 bg-stone-100/60 p-6 border dark:border-stone-800 border-stone-200">
+              <h3 className="font-display text-2xl font-light dark:text-stone-100 text-stone-900 mb-6">
                 Send a Message
               </h3>
-              <div className="space-y-5">
+              <div className="space-y-4">
                 <div>
                   <label className="block text-xs uppercase tracking-widest dark:text-stone-500 text-stone-600 mb-2">
                     Full Name
@@ -233,7 +233,7 @@ export default function ContactSection() {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 rounded-lg px-4 py-3 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 rounded-lg px-4 py-2 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
                     placeholder="Your name"
                   />
                 </div>
@@ -246,7 +246,7 @@ export default function ContactSection() {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 rounded-lg px-4 py-3 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 rounded-lg px-4 py-2 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -260,7 +260,7 @@ export default function ContactSection() {
                     value={form.phone}
                     onChange={handleChange}
                     placeholder="+91 XXXXX XXXXX"
-                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-2 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
                   />
                 </div>
                 <div>
@@ -272,7 +272,7 @@ export default function ContactSection() {
                     name="area"
                     value={form.area}
                     onChange={handleChange}
-                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-2 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all"
                     placeholder="e.g., Criminal Law, Family Law"
                   />
                 </div>
@@ -284,14 +284,14 @@ export default function ContactSection() {
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    rows={5}
-                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-3 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all resize-none"
+                    rows={4}
+                    className="w-full dark:bg-stone-800/40 bg-stone-100/40 border dark:border-stone-700 border-stone-300 dark:text-stone-100 text-stone-900 dark:placeholder-stone-500 placeholder-stone-400 px-4 py-2 text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all resize-none"
                     placeholder="Tell us about your legal matter..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full text-stone-900 px-8 py-4 rounded-lg font-medium transition-all hover:shadow-lg hover:-translate-y-0.5"
+                  className="w-full text-stone-900 px-8 py-3 rounded-lg font-medium transition-all hover:shadow-lg hover:-translate-y-0.5"
                   style={{ background: "var(--gold)" }}
                 >
                   Send Message
