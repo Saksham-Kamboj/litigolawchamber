@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
-import { NAV_LINKS } from "../data/siteData";
+import { CTA, NAV_LINKS } from "../data/siteData";
 import Logo from "./Logo";
 
 export default function Navbar() {
@@ -80,11 +80,10 @@ export default function Navbar() {
 
             {/* CTA */}
             <a
-              href="#contact"
-              className="hidden lg:inline-flex items-center gap-2 px-5 py-2 border text-xs uppercase tracking-widest transition-all duration-300 hover:bg-gold-400 hover:text-stone-950 hover:border-gold-400"
-              style={{ borderColor: "var(--gold)", color: "var(--gold)" }}
+              href={CTA.href}
+              className="hidden lg:inline-flex items-center gap-2 px-5 py-2 border border-gold-400 text-xs text-gold-400 uppercase tracking-widest transition-all duration-300 hover:bg-gold-400 hover:text-stone-950"
             >
-              Consult Now
+              {CTA.text}
             </a>
 
             {/* Hamburger */}

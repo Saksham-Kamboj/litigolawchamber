@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { STATS } from "../data/siteData";
+import { AUTHOR, LOGO, STATS, TAGLINE } from "../data/siteData";
 
 export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
@@ -55,23 +55,20 @@ export default function HeroSection() {
           <div className="flex items-center gap-4 mb-8" style={heroStyle(300)}>
             <div className="gold-line" />
             <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
-              Est. Dehradun · Uttarakhand
+              Est. {AUTHOR.est}
             </span>
           </div>
 
           {/* Heading */}
           <h1 className="font-display leading-none mb-6" style={heroStyle(500)}>
-            <span className="block text-4xl sm:text-5xl lg:text-7xl font-light dark:text-stone-100 text-stone-900">
-              Litigo
+            <span className="block text-4xl sm:text-5xl lg:text-7xl font-light dark:text-stone-100 text-stone-900 capitalize">
+              {LOGO.litigo}
             </span>
-            <span
-              className="block text-4xl sm:text-5xl lg:text-7xl font-light italic"
-              style={{ color: "var(--gold)" }}
-            >
-              Law
+            <span className="block text-4xl sm:text-5xl lg:text-7xl font-light italic capitalize text-gold-400">
+              {LOGO.law}
             </span>
-            <span className="block text-4xl sm:text-5xl lg:text-7xl font-light dark:text-stone-100 text-stone-900">
-              Chambers
+            <span className="block text-4xl sm:text-5xl lg:text-7xl font-light dark:text-stone-100 text-stone-900 capitalize">
+              {LOGO.chambers}
             </span>
           </h1>
 
@@ -80,8 +77,7 @@ export default function HeroSection() {
             className="text-base lg:text-lg font-body dark:text-stone-400 text-stone-600 max-w-xl leading-relaxed mb-10 text-justify"
             style={{ ...heroStyle(700), fontWeight: 300 }}
           >
-            A new generation law firm delivering best quality legal work — with
-            integrity, passion, and an unwavering commitment to justice.
+            {TAGLINE.text}
           </p>
 
           {/* CTA */}

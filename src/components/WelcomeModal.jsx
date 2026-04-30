@@ -1,5 +1,6 @@
 import { useTheme } from "../context/ThemeContext";
 import { useWelcomeModal } from "../context/WelcomeModalContext";
+import { AUTHOR, LOGO, WELCOME_MODAL_CONTENT } from "../data/siteData";
 
 export default function WelcomeModal() {
   const { isDark } = useTheme();
@@ -32,7 +33,7 @@ export default function WelcomeModal() {
               isDark ? "text-stone-100" : "text-stone-900"
             }`}
           >
-            WELCOME
+            {WELCOME_MODAL_CONTENT.title}
           </h2>
         </div>
 
@@ -44,30 +45,9 @@ export default function WelcomeModal() {
             }`}
             style={{ fontFamily: "Georgia, serif" }}
           >
-            <p>
-              Litigo Law Chambers has a dedicated passion for law and strongly
-              believes in "Work is Worship". We, as a firm, have never
-              compromised on certain ethical principles and believes necessary
-              for the effective adjudication of a legal issue while ensuring
-              justice to our client. Integrity is the cornerstone of the firm
-              ensures all the dealings, be it with the clients, employees, and
-              any other concerned person dealing with the firm in whatsoever
-              manner.
-            </p>
-            <p>
-              The firm's depth of experience and comprehensive industry focus
-              distinguishes us from the other law firms or legal practitioner's
-              which further inspire our client's loyalty and satisfaction.
-            </p>
-            <p>
-              The firm is being operated by a group of young hard-working
-              lawyers having vast exposure along with other professionals from
-              diverse fields that our integral and related to law. Litigo Law
-              Chambers forms a formidable team capable of handling diverse and
-              complex legal cases at various legal forums including Hon'ble
-              Supreme Court of India, Hon'ble High Courts, District Courts, and
-              other different Tribunals.
-            </p>
+            <p>{WELCOME_MODAL_CONTENT.content[0]}</p>
+            <p>{WELCOME_MODAL_CONTENT.content[1]}</p>
+            <p>{WELCOME_MODAL_CONTENT.content[2]}</p>
           </div>
         </div>
 
@@ -79,7 +59,7 @@ export default function WelcomeModal() {
             }`}
             style={{ fontFamily: "Georgia, serif" }}
           >
-            Naman Kamboj, Adv.
+            {AUTHOR.name}, {AUTHOR.designation}
           </p>
           <p
             className={`text-xs font-semibold tracking-wide mt-0.5 ${
@@ -87,7 +67,7 @@ export default function WelcomeModal() {
             }`}
             style={{ fontFamily: "Georgia, serif" }}
           >
-            Founder and Managing Partner
+            {AUTHOR.founder}
           </p>
         </div>
 
@@ -96,38 +76,26 @@ export default function WelcomeModal() {
           {/* Logo Text Layout */}
           <div className="flex items-center gap-4">
             {/* LLC */}
-            <div
-              className="font-display lg:text-2xl text-xl font-bold tracking-wider"
-              style={{ color: "var(--gold)" }}
-            >
-              LLC
+            <div className="font-display lg:text-4xl text-xl font-bold tracking-wider text-gold-400 uppercase">
+              {LOGO.llc}
             </div>
 
             {/* Vertical Line */}
-            <div
-              className="w-px lg:h-12 h-10"
-              style={{ backgroundColor: "var(--gold)" }}
-            />
+            <div className="w-px lg:h-12 h-10 bg-gold-400" />
 
             {/* Right Side - LITIGO and LAW CHAMBERS */}
             <div className="flex flex-col">
               {/* LITIGO */}
-              <div
-                className="font-display lg:text-2xl text-xl font-bold tracking-wider leading-tight"
-                style={{ color: "var(--gold)" }}
-              >
-                LITIGO
+              <div className="font-display lg:text-2xl text-xl font-bold tracking-wider leading-tight text-gold-400 uppercase">
+                {LOGO.litigo}
               </div>
 
               {/* Horizontal Line */}
-              <div
-                className="w-full h-px my-1"
-                style={{ backgroundColor: "var(--gold)" }}
-              />
+              <div className="w-full h-px my-1 bg-gold-400" />
 
               {/* LAW CHAMBERS */}
               <div className="lg:text-sm text-xs uppercase tracking-widest dark:text-stone-400 text-stone-500">
-                LAW CHAMBERS
+                {LOGO.lawChambers}
               </div>
             </div>
           </div>

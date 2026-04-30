@@ -1,3 +1,5 @@
+import { AUTHOR, LOGO } from "../data/siteData";
+
 // Icon components
 const LocationIcon = () => (
   <svg
@@ -64,38 +66,26 @@ export default function Footer() {
           {/* Logo mark */}
           <div className="flex items-center gap-3">
             {/* LLC */}
-            <div
-              className="font-display text-5xl font-bold tracking-wider"
-              style={{ color: "var(--gold)" }}
-            >
-              LLC
+            <div className="font-display text-5xl font-bold tracking-wider text-gold-400 uppercase">
+              {LOGO.llc}
             </div>
 
             {/* Vertical Line */}
-            <div
-              className="w-px h-8"
-              style={{ backgroundColor: "var(--gold)" }}
-            />
+            <div className="w-px h-8 bg-gold-400" />
 
             {/* Right Side - LITIGO and LAW CHAMBERS */}
             <div className="flex flex-col">
               {/* LITIGO */}
-              <div
-                className="font-display text-lg font-bold tracking-wider leading-tight"
-                style={{ color: "var(--gold)" }}
-              >
-                LITIGO
+              <div className="font-display text-lg font-bold tracking-wider leading-tight text-gold-400 uppercase">
+                {LOGO.litigo}
               </div>
 
               {/* Horizontal Line */}
-              <div
-                className="w-full h-px my-1"
-                style={{ backgroundColor: "var(--gold)" }}
-              />
+              <div className="w-full h-px my-1 bg-gold-400" />
 
               {/* LAW CHAMBERS */}
-              <div className="text-xs uppercase tracking-widest dark:text-stone-400 text-stone-500">
-                LAW CHAMBERS
+              <div className="text-xs uppercase tracking-widest dark:text-stone-400 text-stone-500 ">
+                {LOGO.lawChambers}
               </div>
             </div>
           </div>
@@ -113,8 +103,8 @@ export default function Footer() {
           <div className="flex items-start gap-3">
             <LocationIcon />
             <div>
-              <span className="font-medium">Office:</span> 11-DS, 2nd Floor, PLS
-              Plaza, 58 Gandhi Road, Dehradun, Uttarakhand
+              <span className="font-medium">Office:</span>
+              {AUTHOR.address}
             </div>
           </div>
 
@@ -122,10 +112,10 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <EmailIcon />
             <a
-              href="mailto:naman@lawyer.com"
+              href={`mailto:${AUTHOR.email}`}
               className="hover:text-gold-400 transition-colors"
             >
-              naman@lawyer.com
+              {AUTHOR.email}
             </a>
           </div>
 
@@ -133,10 +123,10 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <PhoneIcon />
             <a
-              href="tel:+918126630631"
+              href={`tel:${AUTHOR.phone}`}
               className="hover:text-gold-400 transition-colors"
             >
-              +91 8126630631
+              {AUTHOR.phone}
             </a>
           </div>
         </div>

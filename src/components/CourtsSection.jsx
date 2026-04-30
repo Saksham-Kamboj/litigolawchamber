@@ -1,4 +1,4 @@
-import { COURTS } from "../data/siteData";
+import { OUR_REACH } from "../data/siteData";
 import Reveal from "./Reveal";
 
 export default function CourtsSection() {
@@ -10,37 +10,31 @@ export default function CourtsSection() {
             <div className="flex items-center gap-4 mb-6">
               <div className="gold-line" />
               <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
-                Our Reach
+                {OUR_REACH.badge}
               </span>
             </div>
             <h2 className="font-display text-5xl lg:text-6xl font-light dark:text-stone-100 text-stone-900 leading-tight">
-              Courts &<br />
+              {OUR_REACH.heading.line1} &<br />
               <span className="italic" style={{ color: "var(--gold)" }}>
-                Tribunals
+                {OUR_REACH.heading.italicText}
               </span>
             </h2>
             <p className="mt-6 dark:text-stone-400 text-stone-600 font-light leading-relaxed text-justify">
-              From the Supreme Court of India to specialized tribunals, our
-              experienced team practices across the full spectrum of India's
-              judicial hierarchy.
+              {OUR_REACH.description}
             </p>
             <div className="mt-10">
               <div className="text-xs uppercase tracking-widest dark:text-stone-500 text-stone-400 mb-4">
-                Primary Office
+                {OUR_REACH.primaryOffice.label}
               </div>
               <address className="not-italic dark:text-stone-300 text-stone-700 font-light leading-loose">
-                Opposite SDM Court,
-                <br />
-                District Court Compound,
-                <br />
-                Dehradun, Uttarakhand
+                {OUR_REACH.primaryOffice.address}
               </address>
             </div>
           </Reveal>
 
           <Reveal delay={150}>
             <div className="space-y-px">
-              {COURTS.map((court) => (
+              {OUR_REACH.court.map((court) => (
                 <div
                   key={court.name}
                   className={[

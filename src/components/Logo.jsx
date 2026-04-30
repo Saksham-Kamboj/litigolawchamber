@@ -1,3 +1,5 @@
+import { LOGO } from "../data/siteData";
+
 export default function Logo() {
   return (
     <a
@@ -8,10 +10,10 @@ export default function Logo() {
       <div className="flex items-center gap-4">
         {/* LLC */}
         <div
-          className="font-display text-5xl font-bold tracking-wider"
+          className="font-display text-5xl font-bold tracking-wider uppercase"
           style={{ color: "var(--gold)" }}
         >
-          LLC
+          {LOGO.llc}
         </div>
 
         {/* Vertical Line */}
@@ -20,22 +22,16 @@ export default function Logo() {
         {/* Right Side - LITIGO and LAW CHAMBERS */}
         <div className="flex flex-col">
           {/* LITIGO */}
-          <div
-            className="font-display text-xl font-bold tracking-wider leading-tight"
-            style={{ color: "var(--gold)" }}
-          >
-            LITIGO
+          <div className="font-display text-xl font-bold tracking-wider leading-tight uppercase text-gold-400">
+            {LOGO.litigo}
           </div>
 
           {/* Horizontal Line */}
-          <div
-            className="w-full h-px my-1"
-            style={{ backgroundColor: "var(--gold)" }}
-          />
+          <div className="w-full h-px my-1 bg-gold-400" />
 
           {/* LAW CHAMBERS */}
           <div className="text-xs uppercase tracking-widest dark:text-stone-400 text-stone-500">
-            LAW CHAMBERS
+            {LOGO.lawChambers}
           </div>
         </div>
       </div>

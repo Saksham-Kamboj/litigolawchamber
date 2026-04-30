@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Reveal from "./Reveal";
+import { CONTACT_DATA } from "../data/siteData";
 
 function ContactItem({ icon, label, children }) {
   return (
@@ -89,6 +90,21 @@ const PhoneIcon = () => (
   </svg>
 );
 
+const getIcon = (iconName) => {
+  switch (iconName) {
+    case "location":
+      return <LocationIcon />;
+    case "building":
+      return <BuildingIcon />;
+    case "email":
+      return <EmailIcon />;
+    case "phone":
+      return <PhoneIcon />;
+    default:
+      return null;
+  }
+};
+
 export default function ContactSection() {
   const [form, setForm] = useState({
     name: "",
@@ -108,20 +124,18 @@ export default function ContactSection() {
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="gold-line" />
             <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
-              Get In Touch
+              {CONTACT_DATA.badge}
             </span>
             <div className="gold-line" />
           </div>
           <h2 className="font-display text-5xl lg:text-6xl font-light dark:text-stone-100 text-stone-900 mb-8 leading-tight">
-            Let's{" "}
+            {CONTACT_DATA.mainHeading.line1}{" "}
             <span className="italic" style={{ color: "var(--gold)" }}>
-              Connect
+              {CONTACT_DATA.mainHeading.italicText}
             </span>
           </h2>
           <p className="dark:text-stone-400 text-stone-600 text-lg max-w-2xl mx-auto font-light">
-            Have a legal question or need assistance? Reach out to our team of
-            experienced lawyers. We're here to help you navigate your legal
-            challenges with expertise and care.
+            {CONTACT_DATA.subtitle}
           </p>
         </div>
 
@@ -131,67 +145,67 @@ export default function ContactSection() {
             <div className="flex items-center gap-4 mb-6">
               <div className="gold-line" />
               <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
-                Get In Touch
+                {CONTACT_DATA.badge}
               </span>
             </div>
             <h2 className="font-display text-5xl lg:text-6xl font-light text-stone-800 dark:text-stone-100 leading-tight mb-6">
-              Let's Discuss
+              {CONTACT_DATA.leftHeading.line1}
               <br />
               <span className="italic" style={{ color: "var(--gold)" }}>
-                Your Case
+                {CONTACT_DATA.leftHeading.italicText}
               </span>
             </h2>
             <p className="text-stone-400 font-light leading-relaxed mb-12">
-              Reach out to Litigo Law Chambers for expert legal guidance. Our
-              team is ready to provide dedicated support for your legal needs.
+              {CONTACT_DATA.leftDescription}
             </p>
 
             <div className="space-y-8">
-              <ContactItem icon={<LocationIcon />} label="Chamber">
-                <address className="not-italic dark:text-stone-300 text-stone-500 font-light text-sm leading-relaxed">
-                  Opposite SDM Court, District Court Compound,
-                  <br />
-                  Dehradun, Uttarakhand
-                </address>
-              </ContactItem>
+              {CONTACT_DATA.contactItems.map((item) => (
+                <ContactItem
+                  key={item.id}
+                  icon={getIcon(item.icon)}
+                  label={item.label}
+                >
+                  {/* Address type */}
+                  {item.type === "address" && (
+                    <address className="not-italic dark:text-stone-300 text-stone-500 font-light text-sm leading-relaxed">
+                      {item.content.line1}
+                      <br />
+                      {item.content.line2}
+                    </address>
+                  )}
 
-              <ContactItem icon={<BuildingIcon />} label="Office">
-                <address className="not-italic dark:text-stone-300 text-stone-500 font-light text-sm leading-relaxed">
-                  11-DS, 2nd Floor, PLS Plaza,
-                  <br />
-                  Gandhi Road, Dehradun
-                </address>
-              </ContactItem>
+                  {/* Email type */}
+                  {item.type === "email" && (
+                    <div className="space-y-1">
+                      {item.content.map((emailItem, idx) => (
+                        <a
+                          key={idx}
+                          href={emailItem.href}
+                          className="text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block dark:text-stone-300"
+                        >
+                          {emailItem.email}
+                        </a>
+                      ))}
+                    </div>
+                  )}
 
-              <ContactItem icon={<EmailIcon />} label="Email">
-                <a
-                  href="mailto:naman@lawyer.com"
-                  className="text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block dark:text-stone-300"
-                >
-                  naman@lawyer.com
-                </a>
-                <a
-                  href="mailto:litigolaw@gmail.com"
-                  className="dark:text-stone-300 text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block"
-                >
-                  litigolaw@gmail.com
-                </a>
-              </ContactItem>
-
-              <ContactItem icon={<PhoneIcon />} label="Phone">
-                <a
-                  href="tel:+918126630631"
-                  className="dark:text-stone-300 text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block"
-                >
-                  +91 8126630631
-                </a>
-                <a
-                  href="tel:+919868650636"
-                  className="dark:text-stone-300 text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block"
-                >
-                  +91 9868650636
-                </a>
-              </ContactItem>
+                  {/* Phone type */}
+                  {item.type === "phone" && (
+                    <div className="space-y-1">
+                      {item.content.map((phoneItem, idx) => (
+                        <a
+                          key={idx}
+                          href={phoneItem.href}
+                          className="text-stone-500 hover:text-gold-400 font-light text-sm transition-colors block dark:text-stone-300"
+                        >
+                          {phoneItem.number}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </ContactItem>
+              ))}
             </div>
           </Reveal>
 

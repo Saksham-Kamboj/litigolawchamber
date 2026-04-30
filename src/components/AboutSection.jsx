@@ -1,3 +1,4 @@
+import { ABOUT_US, AUTHOR } from "../data/siteData";
 import Reveal from "./Reveal";
 
 export default function AboutSection() {
@@ -11,40 +12,26 @@ export default function AboutSection() {
               <div className="flex items-center gap-4 mb-6">
                 <div className="gold-line" />
                 <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
-                  About the Firm
+                  {ABOUT_US.badge}
                 </span>
               </div>
             </Reveal>
 
             <Reveal delay={100}>
               <h2 className="font-display text-5xl lg:text-6xl font-light dark:text-stone-100 text-stone-900 mb-8 leading-tight">
-                Young Lawyers.
+                {ABOUT_US.heading.line1}
                 <br />
                 <span className="italic" style={{ color: "var(--gold)" }}>
-                  Formidable Team.
+                  {ABOUT_US.heading.italicText}
                 </span>
               </h2>
             </Reveal>
 
             <Reveal delay={200}>
               <div className="space-y-5 dark:text-stone-400 text-stone-600 font-light leading-relaxed text-justify">
-                <p>
-                  Litigo Law Chambers is a dynamic law firm based in
-                  Uttarakhand, India, constituted by a group of young and
-                  passionate lawyers who epitomize the face of the new
-                  generation legal practice.
-                </p>
-                <p>
-                  In a short span, the firm has achieved great heights and
-                  handles a niche clientele including various corporate houses,
-                  financial institutions, co-operative societies and firms
-                  across India.
-                </p>
-                <p>
-                  With associates in all major cities of India, the firm
-                  believes that having superior infrastructure is quintessential
-                  in providing the highest quality service to its clients.
-                </p>
+                {ABOUT_US.paragraphs.map((paragraph, index) => (
+                  <p key={index}>{paragraph.text}</p>
+                ))}
               </div>
             </Reveal>
 
@@ -55,7 +42,7 @@ export default function AboutSection() {
                   className="inline-flex items-center gap-3 text-xs uppercase tracking-widest transition-colors"
                   style={{ color: "var(--gold)" }}
                 >
-                  Learn More About Us
+                  {ABOUT_US.cta.text}
                   <svg
                     className="w-4 h-4"
                     fill="none"
@@ -90,8 +77,7 @@ export default function AboutSection() {
 
                 <div className="quote-mark mb-4">"</div>
                 <blockquote className="font-display text-2xl lg:text-3xl font-light italic dark:text-stone-200 text-stone-800 leading-snug mb-6 text-justify">
-                  Our belief was that hard work and exploring new frontiers
-                  would lead us to success.
+                  {ABOUT_US.quote.text}
                 </blockquote>
                 <div className="flex items-center gap-3">
                   <div
@@ -100,10 +86,10 @@ export default function AboutSection() {
                   />
                   <div>
                     <div className="text-sm font-medium dark:text-stone-200 text-stone-800">
-                      Naman Kamboj
+                      {AUTHOR.name}
                     </div>
                     <div className="text-xs dark:text-stone-500 text-stone-500 tracking-wider">
-                      Founder, Litigo Law Chambers
+                      {AUTHOR.founder}
                     </div>
                   </div>
                 </div>

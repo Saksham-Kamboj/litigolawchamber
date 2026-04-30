@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { DisclaimerContext } from "../context/DisclaimerContext";
 import { useTheme } from "../context/ThemeContext";
 import { useWelcomeModal } from "../context/WelcomeModalContext";
+import { DISCLAIMER_CONTENT } from "../data/siteData";
 
 export default function Disclaimer() {
   const { acceptDisclaimer } = useContext(DisclaimerContext);
@@ -29,12 +30,12 @@ export default function Disclaimer() {
         <div className="flex items-center gap-3 group hover:opacity-80 transition-opacity duration-300">
           {/* Logo Text Layout */}
           <div className="flex items-center gap-4">
-            {/* LLC */}
+            {/* Firm Name */}
             <div
               className="font-display lg:text-7xl text-5xl font-bold tracking-wider"
               style={{ color: "var(--gold)" }}
             >
-              LLC
+              {DISCLAIMER_CONTENT.firmName}
             </div>
 
             {/* Vertical Line */}
@@ -43,7 +44,7 @@ export default function Disclaimer() {
               style={{ backgroundColor: "var(--gold)" }}
             />
 
-            {/* Right Side - LITIGO and LAW CHAMBERS */}
+            {/* Right Side - Firm Name */}
             <div className="flex flex-col">
               {/* LITIGO */}
               <div
@@ -78,7 +79,7 @@ export default function Disclaimer() {
               {/* Horizontal Line Separators for Legal Disclaimer */}
               <div className="gold-line" />
               <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
-                Legal Disclaimer
+                {DISCLAIMER_CONTENT.title}
               </span>
               <div className="gold-line" />
             </div>
@@ -90,51 +91,14 @@ export default function Disclaimer() {
             </h1>
           </div>
 
-          {/* Disclaimer Content - ADDED text-justify AND text-align: justify */}
+          {/* Disclaimer Content */}
           <div
             className="space-y-4 dark:text-stone-300 text-stone-700 text-sm leading-relaxed font-light"
             style={{ textAlign: "justify" }}
           >
-            <p>
-              The Bar Council of India does not permit solicitation of work and
-              advertising by legal practitioners. Litigo Law Chambers is,
-              therefore, constrained from providing any further information on
-              this web page. By accessing Litigo Law Chambers website (our
-              website), the user by clicking on "I AGREE" acknowledges that:
-            </p>
-
-            <p>
-              The user wishes to gain more information about Litigo Law
-              Chambers, its practice area and its Attorneys, for his/her own
-              information and use. The user endorses and acknowledges that there
-              has been no attempt by Litigo Law Chambers to advertise or solicit
-              work.
-            </p>
-
-            <p>
-              The information is made available/provided to user only on
-              user-specific request and any information obtained or material
-              downloaded from this website is completely at the user's volition
-              and any transmission, receipt or use of this site is not intended
-              to, and will not create any lawyer-client relationship.
-            </p>
-
-            <p>
-              None of the information contained on this website is in the nature
-              of a legal opinion or otherwise.
-            </p>
-
-            <p>
-              Litigo Law Chambers is not liable for any consequence of any
-              action taken by the user relying upon material or information
-              provided under this website. If the user has any legal issues, the
-              user in all cases must seek independent legal advice.
-            </p>
-
-            <p>
-              All information contained on this website is Intellectual Property
-              of Litigo Law Chambers.
-            </p>
+            {DISCLAIMER_CONTENT.content.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
 
           {/* Action Buttons */}

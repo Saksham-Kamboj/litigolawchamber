@@ -1,3 +1,32 @@
+export const AUTHOR = {
+  name: "Naman Kamboj",
+  designation: "Advocate",
+  email: "namankamboj@gmail.com",
+  phone: "+91 98765 43210",
+  est: "Dehradun · Uttarakhand",
+  founder: "Founder, Litigo Law Chambers",
+  address: "11-DS, 2nd Floor, PLS Plaza, 58 Gandhi Road, Dehradun, Uttarakhand",
+};
+
+export const SOCIAL_LINKS = [
+  { href: "https://linkedin.com", label: "LinkedIn", icon: "linkedin" },
+  { href: "https://twitter.com", label: "Twitter", icon: "twitter" },
+  { href: "https://facebook.com", label: "Facebook", icon: "facebook" },
+];
+
+export const LOGO = {
+  llc: "llc",
+  litigo: "litigo",
+  lawChambers: "law chambers",
+  law: "law",
+  chambers: "chambers",
+};
+
+export const CTA = {
+  text: "Consult Now",
+  href: "#contact",
+};
+
 export const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
@@ -7,12 +36,48 @@ export const NAV_LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
+export const TAGLINE = {
+  text: "A new generation law firm delivering best quality legal work — with integrity, passion, and an unwavering commitment to justice.",
+};
+
 export const STATS = [
   { num: "4+", label: "High Courts" },
   { num: "10+", label: "Tribunals & Forums" },
   { num: "7+", label: "Practice Areas" },
   { num: "∞", label: "Client Trust" },
 ];
+
+export const ABOUT_US = {
+  id: "about",
+  badge: "About the Firm",
+
+  heading: {
+    line1: "Young Lawyers.",
+    line2: "Formidable Team.",
+    italicText: "Formidable Team.",
+  },
+
+  paragraphs: [
+    {
+      text: "Litigo Law Chambers is a dynamic law firm based in Uttarakhand, India, constituted by a group of young and passionate lawyers who epitomize the face of the new generation legal practice.",
+    },
+    {
+      text: "In a short span, the firm has achieved great heights and handles a niche clientele including various corporate houses, financial institutions, co-operative societies and firms across India.",
+    },
+    {
+      text: "With associates in all major cities of India, the firm believes that having superior infrastructure is quintessential in providing the highest quality service to its clients.",
+    },
+  ],
+
+  cta: {
+    text: "Learn More About Us",
+    href: "#contact",
+  },
+
+  quote: {
+    text: "Our belief was that hard work and exploring new frontiers would lead us to success.",
+  },
+};
 
 export const SERVICES = [
   {
@@ -131,28 +196,44 @@ export const SERVICES = [
   },
 ];
 
-export const COURTS = [
-  { name: "Supreme Court of India", highlighted: true },
-  { name: "High Court of Uttarakhand at Nainital", highlighted: false },
-  { name: "High Court of Delhi at Delhi", highlighted: false },
-  { name: "High Court of Sikkim at Gangtok", highlighted: false },
-  { name: "High Court of Uttar Pradesh at Allahabad", highlighted: false },
-  {
-    name: "National Consumer Disputes Redressal Commission, New Delhi",
-    highlighted: false,
+export const OUR_REACH = {
+  id: "courts",
+  badge: "Our Reach",
+  heading: {
+    line1: "Courts &",
+    line2: "Tribunals",
+    italicText: "Tribunals",
   },
-  { name: "Central Administrative Tribunal at Nainital", highlighted: false },
-  { name: "Debt Recovery Tribunal, Dehradun", highlighted: false },
-  { name: "District Court & Labour Courts, Dehradun", highlighted: false },
-  {
-    name: "Real Estate Regulatory Authority & Appellate Tribunal, Dehradun",
-    highlighted: false,
+  description:
+    "From the Supreme Court of India to specialized tribunals, our experienced team practices across the full spectrum of India's judicial hierarchy.",
+  primaryOffice: {
+    label: "Primary Office",
+    address:
+      "Opposite SDM Court, District Court Compound, Dehradun, Uttarakhand",
   },
-  {
-    name: "District & State Consumer Disputes Redressal Forums",
-    highlighted: false,
-  },
-];
+  court: [
+    { name: "Supreme Court of India", highlighted: true },
+    { name: "High Court of Uttarakhand at Nainital", highlighted: false },
+    { name: "High Court of Delhi at Delhi", highlighted: false },
+    { name: "High Court of Sikkim at Gangtok", highlighted: false },
+    { name: "High Court of Uttar Pradesh at Allahabad", highlighted: false },
+    {
+      name: "National Consumer Disputes Redressal Commission, New Delhi",
+      highlighted: false,
+    },
+    { name: "Central Administrative Tribunal at Nainital", highlighted: false },
+    { name: "Debt Recovery Tribunal, Dehradun", highlighted: false },
+    { name: "District Court & Labour Courts, Dehradun", highlighted: false },
+    {
+      name: "Real Estate Regulatory Authority & Appellate Tribunal, Dehradun",
+      highlighted: false,
+    },
+    {
+      name: "District & State Consumer Disputes Redressal Forums",
+      highlighted: false,
+    },
+  ],
+};
 
 export const TEAM_FOUNDER = {
   name: "Naman Kamboj",
@@ -231,3 +312,100 @@ export const STRENGTHS = [
   "Strong hold over constitutional provisions",
   "Commitment to client's solace & satisfaction",
 ];
+
+export const DISCLAIMER_CONTENT = {
+  firmName: "LLC",
+  title: "Legal Disclaimer",
+  content: [
+    'The Bar Council of India does not permit solicitation of work and advertising by legal practitioners. Litigo Law Chambers is, therefore, constrained from providing any further information on this web page. By accessing Litigo Law Chambers website (our website), user by clicking on "I AGREE" acknowledges that:',
+    "The user wishes to gain more information about Litigo Law Chambers, its practice area and its Attorneys, for his/her own information and use. The user endorses and acknowledges that there has been no attempt by Litigo Law Chambers to advertise or solicit work.",
+    "None of the information contained on this website is in the nature of a legal opinion or otherwise.",
+    "Litigo Law Chambers is not liable for any consequence of any action taken by the user relying upon material or information provided under this website. If the user has any legal issues, user in all cases must seek independent legal advice.",
+    "All information contained on this website is Intellectual Property of Litigo Law Chambers.",
+  ],
+};
+
+export const WELCOME_MODAL_CONTENT = {
+  title: "WELCOME",
+  subtitle: "A new generation law firm delivering best quality legal work",
+  content: [
+    `Litigo Law Chambers has a dedicated passion for law and strongly believes in "Work is Worship". We, as a firm, have never compromised on certain ethical principles and believes necessary for the effective adjudication of a legal issue while ensuring justice to our client. Integrity is the cornerstone of the firm ensures all the dealings, be it with the clients, employees, and any other concerned person dealing with the firm in whatsoever manner.`,
+    "The firm's depth of experience and comprehensive industry focus distinguishes us from the other law firms or legal practitioner's which further inspire our client's loyalty and satisfaction.",
+    "The firm is being operated by a group of young hard-working lawyers having vast exposure along with other professionals from diverse fields that our integral and related to law. Litigo Law Chambers forms a formidable team capable of handling diverse and complex legal cases at various legal forums including Hon'ble Supreme Court of India, Hon'ble High Courts, District Courts, and other different Tribunals.",
+  ],
+};
+
+export const CONTACT_DATA = {
+  // Section metadata
+  id: "contact",
+  badge: "Get In Touch",
+
+  // Main heading (top center)
+  mainHeading: {
+    line1: "Let's",
+    line2: "Connect",
+    italicText: "Connect",
+  },
+
+  // Subtitle (top center)
+  subtitle:
+    "Have a legal question or need assistance? Reach out to our team of experienced lawyers. We're here to help you navigate your legal challenges with expertise and care.",
+
+  // Left side heading
+  leftHeading: {
+    line1: "Let's Discuss",
+    line2: "Your Case",
+    italicText: "Your Case",
+  },
+
+  // Left side description
+  leftDescription:
+    "Reach out to Litigo Law Chambers for expert legal guidance. Our team is ready to provide dedicated support for your legal needs.",
+
+  // Contact items
+  contactItems: [
+    {
+      id: "chamber",
+      icon: "location",
+      label: "Chamber",
+      type: "address",
+      content: {
+        line1: "Opposite SDM Court, District Court Compound,",
+        line2: "Dehradun, Uttarakhand",
+      },
+    },
+    {
+      id: "office",
+      icon: "building",
+      label: "Office",
+      type: "address",
+      content: {
+        line1: "11-DS, 2nd Floor, PLS Plaza,",
+        line2: "Gandhi Road, Dehradun",
+      },
+    },
+    {
+      id: "email",
+      icon: "email",
+      label: "Email",
+      type: "email",
+      content: [
+        {
+          email: "namankamboj@gmail.com",
+          href: "mailto:namankamboj@gmail.com",
+        },
+        { email: "litigolaw@gmail.com", href: "mailto:litigolaw@gmail.com" },
+      ],
+    },
+    {
+      id: "phone",
+      icon: "phone",
+      label: "Phone",
+      type: "phone",
+      content: [
+        { number: "+91 98765 43210", href: "tel:+919876543210" },
+        { number: "+91 98686 50636", href: "tel:+919868650636" },
+      ],
+    },
+  ],
+};
