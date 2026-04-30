@@ -256,7 +256,7 @@ export default function ContactSection() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full text-stone-900 px-8 py-3 rounded-lg font-medium transition-all hover:shadow-lg hover:-translate-y-0.5"
+                  className="w-full text-stone-900 px-8 py-3 font-medium transition-all hover:shadow-lg hover:-translate-y-0.5"
                   style={{ background: "var(--gold)" }}
                 >
                   Send Message
