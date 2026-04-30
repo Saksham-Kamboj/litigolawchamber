@@ -35,9 +35,18 @@ body::before {
 }
 
 /* Custom Scrollbar */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 2px;
+}
 
 /* Gold line dividers */
 .gold-line {
@@ -85,8 +94,13 @@ body::before {
   transition: opacity 0.4s;
 }
 
-.service-card:hover::before { opacity: 1; }
-.service-card:hover { transform: translateY(-4px); }
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
 
 /* Nav link underline */
 .nav-link {
@@ -107,7 +121,9 @@ body::before {
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after { width: 100%; }
+.nav-link:hover::after {
+  width: 100%;
+}
 
 /* Stat number */
 .stat-num {
@@ -126,12 +142,24 @@ body::before {
 
 /* Float animation */
 @keyframes floatSlow {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(1deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
 }
 
-.float-anim { animation: floatSlow 8s ease-in-out infinite; }
-.float-anim-delay { animation: floatSlow 10s ease-in-out infinite 2s; }
+.float-anim {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.float-anim-delay {
+  animation: floatSlow 10s ease-in-out infinite 2s;
+}
 
 /* Scroll progress */
 .scroll-progress {
@@ -146,8 +174,15 @@ body::before {
 
 /* Reveal animations */
 @keyframes revealUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .reveal-animate {
@@ -180,4 +215,37 @@ body::before {
   font-weight: 600;
 }
 
-section { transition: background 0.4s; }
+section {
+  transition: background 0.4s;
+}
+
+/* Modal Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-up {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-scale-up {
+  animation: scale-up 0.4s ease-out;
+}

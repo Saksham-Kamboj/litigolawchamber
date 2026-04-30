@@ -8,9 +8,9 @@ export default function WelcomeModal() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-80">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-80 animate-fade-in">
       <div
-        className={`relative max-w-4xl w-full rounded-lg border py-4 lg:py-10 ${
+        className={`relative max-w-4xl w-full rounded-lg border py-4 lg:py-10 animate-scale-up ${
           isDark ? "bg-stone-900 border-stone-700" : "bg-white border-stone-200"
         }`}
       >

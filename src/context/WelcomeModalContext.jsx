@@ -12,7 +12,7 @@ export function WelcomeModalProvider({ children }) {
       setTimeout(() => {
         setIsOpen(true);
         localStorage.setItem("hasSeenWelcome", "true");
-      }, 2500);
+      }, 2000);
     }
   };
 
