@@ -4,26 +4,8 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="py-24 lg:py-36 dark:bg-stone-950 bg-white px-4 lg:px-12 relative overflow-hidden"
+      className="py-24 lg:py-36 dark:bg-stone-950 bg-white px-4 lg:px-12 gold-mesh-bg-white"
     >
-      {/* Gold mesh bg */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
-      <div
-        className="absolute top-0 left-0 right-0 h-px"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent, var(--gold), transparent)",
-          opacity: 0.4,
-        }}
-      />
-
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text */}
