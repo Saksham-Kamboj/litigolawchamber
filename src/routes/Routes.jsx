@@ -6,6 +6,9 @@ import AppContent from "../components/Layout/AppContent";
 import Home from "../pages/Home";
 import AboutUs from "../pages/AboutUs";
 import PracticeArea from "../pages/PracticeArea";
+import KnowledgeGateway from "../pages/KnowledgeGateway";
+import OurTeam from "../pages/OurTeam";
+import Contact from "../pages/Contact";
 
 export default function AppRoutes() {
   return (
@@ -36,6 +39,36 @@ export default function AppRoutes() {
           <ProtectedRoute>
             <AppContent>
               <PracticeArea />
+            </AppContent>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/litigolawchamber/knowledge-gateway"
+        element={
+          <ProtectedRoute>
+            <AppContent>
+              <KnowledgeGateway />
+            </AppContent>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/litigolawchamber/our-team"
+        element={
+          <ProtectedRoute>
+            <AppContent>
+              <OurTeam />
+            </AppContent>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/litigolawchamber/contact"
+        element={
+          <ProtectedRoute>
+            <AppContent>
+              <Contact />
             </AppContent>
           </ProtectedRoute>
         }
