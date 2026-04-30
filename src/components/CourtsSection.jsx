@@ -7,20 +7,23 @@ export default function CourtsSection() {
       id="courts"
       className="py-24 lg:py-36 dark:bg-stone-950 bg-white relative overflow-hidden px-4 lg:px-12"
     >
-      <div className="absolute right-0 top-0 w-72 h-72 opacity-5 pointer-events-none">
-        <svg
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          stroke="#c9a84c"
-          strokeWidth="1"
-        >
-          <circle cx="100" cy="100" r="90" />
-          <circle cx="100" cy="100" r="70" />
-          <circle cx="100" cy="100" r="50" />
-          <circle cx="100" cy="100" r="30" />
-        </svg>
-      </div>
+      {/* Gold mesh bg */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+      <div
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, var(--gold), transparent)",
+          opacity: 0.4,
+        }}
+      />
 
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
