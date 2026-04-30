@@ -18,7 +18,7 @@ export default function Disclaimer() {
 
   return (
     <div
-      className={`min-h-screen flex flex-col lg:flex-row gap-5 items-center justify-center px-4 py-12 ${isDark ? "bg-slate-950" : "bg-stone-50"}`}
+      className={`min-h-screen flex flex-col lg:flex-row gap-5 items-center justify-center px-4 ${isDark ? "bg-slate-950" : "bg-stone-50"}`}
     >
       <div className="w-full flex items-center justify-center">
         <div className="flex items-center gap-3 group hover:opacity-80 transition-opacity duration-300">
@@ -64,7 +64,7 @@ export default function Disclaimer() {
       </div>
       <div className="max-w-4xl mx-auto">
         <div
-          className={`dark:bg-stone-900 bg-white p-8 lg:p-12 border border-stone-200 dark:border-stone-800 ${isDark ? "bg-stone-900" : "bg-white"}`}
+          className={`dark:bg-stone-900 bg-white p-8 lg:p-10 border border-stone-200 dark:border-stone-800 ${isDark ? "bg-stone-900" : "bg-white"}`}
         >
           {/* Header with Logo */}
           <div className="text-center mb-8">
@@ -85,8 +85,11 @@ export default function Disclaimer() {
             </h1>
           </div>
 
-          {/* Disclaimer Content */}
-          <div className="space-y-4 dark:text-stone-300 text-stone-700 text-xs leading-relaxed font-light">
+          {/* Disclaimer Content - ADDED text-justify AND text-align: justify */}
+          <div
+            className="space-y-4 dark:text-stone-300 text-stone-700 text-sm leading-relaxed font-light"
+            style={{ textAlign: "justify" }}
+          >
             <p>
               The Bar Council of India does not permit solicitation of work and
               advertising by legal practitioners. Litigo Law Chambers is,
