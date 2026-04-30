@@ -39,7 +39,7 @@ export default function AboutSection() {
             <Reveal delay={300}>
               <div className="mt-10">
                 <Link
-                  to="/contact"
+                  to="/litigolawchamber/contact"
                   className="inline-flex items-center gap-3 text-xs uppercase tracking-widest transition-colors"
                   style={{ color: "var(--gold)" }}
                 >

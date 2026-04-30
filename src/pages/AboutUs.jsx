@@ -1,5 +1,9 @@
-import React from "react";
+import PageHeroSection from "../components/PageHeroSection";
 
 export default function AboutUs() {
-  return <div>AboutUs</div>;
+  return (
+    <div>
+      <PageHeroSection />
+    </div>
+  );
 }

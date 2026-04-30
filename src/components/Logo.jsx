@@ -4,7 +4,7 @@ import { LOGO } from "../data/siteData";
 export default function Logo() {
   return (
     <Link
-      to="/home"
+      to="/litigolawchamber/home"
       className="flex items-center gap-3 group hover:opacity-80 transition-opacity duration-300"
     >
       {/* Logo Text Layout */}

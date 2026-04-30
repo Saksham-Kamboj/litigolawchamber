@@ -84,7 +84,7 @@ export default function HeroSection() {
           {/* CTA */}
           <div className="flex flex-wrap gap-4" style={heroStyle(900)}>
             <Link
-              to="/services"
+              to="/litigolawchamber/services"
               className="inline-flex items-center gap-3 px-7 py-3.5 text-xs uppercase tracking-widest font-medium text-stone-950 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
               style={{ background: "var(--gold)" }}
             >
@@ -104,7 +104,7 @@ export default function HeroSection() {
               </svg>
             </Link>
             <Link
-              to="/contact"
+              to="/litigolawchamber/contact"
               className="inline-flex items-center gap-3 px-7 py-3.5 text-xs uppercase tracking-widest font-medium transition-all duration-300 border hover:border-gold-400"
               style={{
                 borderColor: "rgba(201,168,76,0.3)",
