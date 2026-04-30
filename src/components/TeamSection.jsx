@@ -3,10 +3,7 @@ import Reveal from "./Reveal";
 
 export default function TeamSection() {
   return (
-    <section
-      id="team"
-      className="py-24 lg:py-36 dark:bg-slate-950 bg-stone-50 px-4 lg:px-12 gold-mesh-bg"
-    >
+    <section id="team" className="py-24 lg:py-36 px-4 lg:px-12 gold-mesh-bg">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <Reveal>

@@ -28,7 +28,7 @@ function AppContent() {
   }
 
   return (
-    <div className="dark:bg-slate-950 dark:text-stone-100 bg-stone-50 text-stone-900 font-body">
+    <div className="dark:bg-slate-950 dark:text-stone-100 bg-white text-stone-900 font-body">
       <ScrollProgress />
       <Navbar />
       <main>

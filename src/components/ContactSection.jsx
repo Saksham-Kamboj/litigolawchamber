@@ -102,10 +102,7 @@ export default function ContactSection() {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
   return (
-    <section
-      id="contact"
-      className="py-24 lg:py-36 px-4 lg:px-12 dark:bg-slate-950 bg-stone-50 gold-mesh-bg"
-    >
+    <section id="contact" className="py-24 lg:py-36 px-4 lg:px-12 gold-mesh-bg">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">

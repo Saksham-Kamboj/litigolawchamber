@@ -2,10 +2,7 @@ import Reveal from "./Reveal";
 
 export default function AboutSection() {
   return (
-    <section
-      id="about"
-      className="py-24 lg:py-36 dark:bg-stone-950 bg-white px-4 lg:px-12 gold-mesh-bg-white"
-    >
+    <section id="about" className="py-24 lg:py-36 px-4 lg:px-12 gold-mesh-bg">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text */}
