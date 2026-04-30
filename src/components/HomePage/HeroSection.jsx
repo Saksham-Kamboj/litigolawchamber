@@ -50,7 +50,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto pt-32 pb-24 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto pb-24 relative z-10 w-full">
         <div className="">
           {/* Eyebrow */}
           <div className="flex items-center gap-4 mb-8" style={heroStyle(300)}>
