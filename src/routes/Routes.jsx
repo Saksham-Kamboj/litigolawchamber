@@ -5,6 +5,7 @@ import Disclaimer from "../components/Disclaimer";
 import AppContent from "../components/Layout/AppContent";
 import Home from "../pages/Home";
 import AboutUs from "../pages/AboutUs";
+import PracticeArea from "../pages/PracticeArea";
 
 export default function AppRoutes() {
   return (
@@ -25,6 +26,16 @@ export default function AppRoutes() {
           <ProtectedRoute>
             <AppContent>
               <AboutUs />
+            </AppContent>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/litigolawchamber/practice-area"
+        element={
+          <ProtectedRoute>
+            <AppContent>
+              <PracticeArea />
             </AppContent>
           </ProtectedRoute>
         }
