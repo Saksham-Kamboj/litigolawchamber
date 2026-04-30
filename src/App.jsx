@@ -22,7 +22,7 @@ function AppContent() {
   const { disclaimerAccepted } = useDisclaimer();
 
   if (!disclaimerAccepted) {
-    return <Disclaimer />;
+    return <Navigate to="/litigolawchamber/disclaimer" replace />;
   }
 
   return (
@@ -54,7 +54,10 @@ export default function App() {
               path="/litigolawchamber/disclaimer"
               element={<Disclaimer />}
             />
-            <Route path="*" element={<Disclaimer />} />
+            <Route
+              path="*"
+              element={<Navigate to="/litigolawchamber" replace />}
+            />
           </Routes>
         </Router>
       </DisclaimerProvider>
