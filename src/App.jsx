@@ -1,14 +1,14 @@
-import { ThemeProvider } from './context/ThemeContext'
-import ScrollProgress from './components/ScrollProgress'
-import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
-import AboutSection from './components/AboutSection'
-import ServicesSection from './components/ServicesSection'
-import CourtsSection from './components/CourtsSection'
-import TeamSection from './components/TeamSection'
-import ValuesSection from './components/ValuesSection'
-import ContactSection from './components/ContactSection'
-import Footer from './components/Footer'
+import { ThemeProvider } from "./context/ThemeContext";
+import ScrollProgress from "./components/ScrollProgress";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
+import ServicesSection from "./components/ServicesSection";
+import CourtsSection from "./components/CourtsSection";
+import TeamSection from "./components/TeamSection";
+import ValuesSection from "./components/ValuesSection";
+import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -28,5 +28,5 @@ export default function App() {
         <Footer />
       </div>
     </ThemeProvider>
-  )
+  );
 }

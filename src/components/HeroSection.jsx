@@ -18,7 +18,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center relative overflow-hidden hero-bg"
+      className="min-h-screen flex items-center relative overflow-hidden hero-bg px-4 lg:px-12"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -49,8 +49,8 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-24 relative z-10 w-full">
-        <div className="max-w-4xl">
+      <div className="max-w-7xl mx-auto pt-32 pb-24 relative z-10 w-full">
+        <div className="">
           {/* Eyebrow */}
           <div className="flex items-center gap-4 mb-8" style={heroStyle(300)}>
             <div className="gold-line" />

@@ -1,21 +1,29 @@
-import { VALUES, STRENGTHS } from '../data/siteData'
-import Reveal from './Reveal'
+import { VALUES, STRENGTHS } from "../data/siteData";
+import Reveal from "./Reveal";
 
 export default function ValuesSection() {
   return (
-    <section id="values" className="py-24 lg:py-36 dark:bg-stone-950 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section
+      id="values"
+      className="py-24 lg:py-36 dark:bg-stone-950 bg-white px-4 lg:px-12"
+    >
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Reveal>
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="gold-line" />
-              <span className="text-xs uppercase tracking-[0.25em] text-gold-400">Why Choose Us</span>
+              <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
+                Why Choose Us
+              </span>
               <div className="gold-line" />
             </div>
           </Reveal>
           <Reveal delay={100}>
             <h2 className="font-display text-5xl lg:text-6xl font-light dark:text-stone-100 text-stone-900">
-              Values &amp; <span className="italic" style={{ color: 'var(--gold)' }}>Strengths</span>
+              Values &amp;{" "}
+              <span className="italic" style={{ color: "var(--gold)" }}>
+                Strengths
+              </span>
             </h2>
           </Reveal>
         </div>
@@ -31,7 +39,9 @@ export default function ValuesSection() {
                 <h3 className="font-display text-2xl font-light dark:text-stone-100 text-stone-900 mb-3">
                   {value.title}
                 </h3>
-                <p className="text-sm dark:text-stone-500 text-stone-500 font-light leading-relaxed">{value.desc}</p>
+                <p className="text-sm dark:text-stone-500 text-stone-500 font-light leading-relaxed">
+                  {value.desc}
+                </p>
               </div>
             </Reveal>
           ))}
@@ -48,16 +58,23 @@ export default function ValuesSection() {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
-                  style={{ color: 'var(--gold)' }}
+                  style={{ color: "var(--gold)" }}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
-                <span className="text-sm dark:text-stone-400 text-stone-600 font-light">{strength}</span>
+                <span className="text-sm dark:text-stone-400 text-stone-600 font-light">
+                  {strength}
+                </span>
               </div>
             ))}
           </div>
         </Reveal>
       </div>
     </section>
-  )
+  );
 }

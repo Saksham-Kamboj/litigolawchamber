@@ -1,31 +1,39 @@
-import { SERVICES } from '../data/siteData'
-import Reveal from './Reveal'
+import { SERVICES } from "../data/siteData";
+import Reveal from "./Reveal";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 lg:py-36 dark:bg-slate-950 bg-stone-50 relative overflow-hidden">
+    <section
+      id="services"
+      className="py-24 lg:py-36 dark:bg-slate-950 bg-stone-50 relative overflow-hidden px-4 lg:px-12"
+    >
       {/* BG texture */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
+            "linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <Reveal>
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="gold-line" />
-              <span className="text-xs uppercase tracking-[0.25em] text-gold-400">What We Do</span>
+              <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
+                What We Do
+              </span>
               <div className="gold-line" />
             </div>
           </Reveal>
           <Reveal delay={100}>
             <h2 className="font-display text-5xl lg:text-6xl font-light dark:text-stone-100 text-stone-900">
-              Areas of <span className="italic" style={{ color: 'var(--gold)' }}>Practice</span>
+              Areas of{" "}
+              <span className="italic" style={{ color: "var(--gold)" }}>
+                Practice
+              </span>
             </h2>
           </Reveal>
         </div>
@@ -43,7 +51,7 @@ export default function ServicesSection() {
                 </p>
                 <div
                   className="mt-6 w-8 h-px transition-all duration-300 group-hover:w-16"
-                  style={{ background: 'var(--gold)' }}
+                  style={{ background: "var(--gold)" }}
                 />
               </div>
             </Reveal>
@@ -51,5 +59,5 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
