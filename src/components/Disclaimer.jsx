@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { DisclaimerContext } from "../context/DisclaimerContext";
 import { useTheme } from "../context/ThemeContext";
+import Logo from "./Logo";
 
 export default function Disclaimer() {
   const { acceptDisclaimer } = useContext(DisclaimerContext);
@@ -17,8 +18,50 @@ export default function Disclaimer() {
 
   return (
     <div
-      className={`min-h-screen flex items-center justify-center px-4 py-12 ${isDark ? "bg-slate-950" : "bg-stone-50"}`}
+      className={`min-h-screen flex flex-col lg:flex-row gap-5 items-center justify-center px-4 py-12 ${isDark ? "bg-slate-950" : "bg-stone-50"}`}
     >
+      <div className="w-full flex items-center justify-center">
+        <div className="flex items-center gap-3 group hover:opacity-80 transition-opacity duration-300">
+          {/* Logo Text Layout */}
+          <div className="flex items-center gap-4">
+            {/* LLC */}
+            <div
+              className="font-display lg:text-7xl text-5xl font-bold tracking-wider"
+              style={{ color: "var(--gold)" }}
+            >
+              LLC
+            </div>
+
+            {/* Vertical Line */}
+            <div
+              className="w-px lg:h-24 h-16"
+              style={{ backgroundColor: "var(--gold)" }}
+            />
+
+            {/* Right Side - LITIGO and LAW CHAMBERS */}
+            <div className="flex flex-col">
+              {/* LITIGO */}
+              <div
+                className="font-display lg:text-5xl text-3xl font-bold tracking-wider leading-tight"
+                style={{ color: "var(--gold)" }}
+              >
+                LITIGO
+              </div>
+
+              {/* Horizontal Line */}
+              <div
+                className="w-full h-px my-1"
+                style={{ backgroundColor: "var(--gold)" }}
+              />
+
+              {/* LAW CHAMBERS */}
+              <div className="lg:text-2xl text-xl uppercase tracking-widest dark:text-stone-400 text-stone-500">
+                LAW CHAMBERS
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="max-w-4xl mx-auto">
         <div
           className={`dark:bg-stone-900 bg-white p-8 lg:p-12 border border-stone-200 dark:border-stone-800 ${isDark ? "bg-stone-900" : "bg-white"}`}
