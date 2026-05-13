@@ -8,6 +8,7 @@ import IntellectualPropertyRightsIcon from "../assets/lock-svgrepo-com.svg";
 import CorporateCompliancesIcon from "../assets/office-block-town-svgrepo-com.svg";
 import ConsumerDisputeRedressalIcon from "../assets/users-chat-talk-svgrepo-com.svg";
 import AlternateDisputeResolutionIcon from "../assets/users-user-svgrepo-com.svg";
+import Reveal from "../components/Reveal";
 
 export default function PracticeArea() {
   const data = [
@@ -76,21 +77,23 @@ export default function PracticeArea() {
                 key={index}
                 className="group bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 rounded-lg p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-full border-2 border-gold-400/20 bg-gold-400/5 flex items-center justify-center mb-6 group-hover:border-gold-400 group-hover:bg-gold-400/10 transition-all duration-300">
-                    <img
-                      src={item.icon}
-                      alt={item.title}
-                      className="w-10 h-10 object-contain filter dark:invert"
-                    />
+                <Reveal delay={150}>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-20 h-20 rounded-full border-2 border-gold-400/20 bg-gold-400/5 flex items-center justify-center mb-6 group-hover:border-gold-400 group-hover:bg-gold-400/10 transition-all duration-300">
+                      <img
+                        src={item.icon}
+                        alt={item.title}
+                        className="w-10 h-10 object-contain filter dark:invert"
+                      />
+                    </div>
+                    <h3 className="font-display text-xl font-light dark:text-stone-100 text-stone-900 mb-4 group-hover:text-gold-400 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm dark:text-stone-400 text-stone-600 leading-relaxed font-light text-justify">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="font-display text-xl font-light dark:text-stone-100 text-stone-900 mb-4 group-hover:text-gold-400 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm dark:text-stone-400 text-stone-600 leading-relaxed font-light text-justify">
-                    {item.description}
-                  </p>
-                </div>
+                </Reveal>
               </div>
             ))}
           </div>
