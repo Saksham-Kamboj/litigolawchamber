@@ -1,30 +1,10 @@
-import { TEAM_FOUNDER, TEAM_MEMBERS } from "../../data/siteData";
-import Reveal from "../Reveal";
+import { TEAM_FOUNDER, TEAM_MEMBERS } from "../data/siteData";
+import Reveal from "./Reveal";
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-24 lg:py-36 px-4 lg:px-12 gold-mesh-bg">
+    <section id="team" className="py-24 lg:py-10 px-4 lg:px-12 gold-mesh-bg">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <Reveal>
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="gold-line" />
-              <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
-                The People
-              </span>
-              <div className="gold-line" />
-            </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <h2 className="font-display text-5xl lg:text-6xl font-light dark:text-stone-100 text-stone-900">
-              Our{" "}
-              <span className="italic" style={{ color: "var(--gold)" }}>
-                Team
-              </span>
-            </h2>
-          </Reveal>
-        </div>
-
         {/* Founder spotlight */}
         <Reveal>
           <div className="dark:bg-stone-900 bg-white p-10 lg:p-14 mb-6 relative overflow-hidden">

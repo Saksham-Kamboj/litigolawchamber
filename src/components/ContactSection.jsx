@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Reveal from "../Reveal";
-import { CONTACT_DATA } from "../../data/siteData";
+import Reveal from "./Reveal";
+import { CONTACT_DATA } from "../data/siteData";
 import { Link } from "react-router-dom";
 
 function ContactItem({ icon, label, children }) {
@@ -119,27 +119,8 @@ export default function ContactSection() {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
   return (
-    <section id="contact" className="py-24 lg:py-36 px-4 lg:px-12 gold-mesh-bg">
+    <section id="contact" className="py-24 lg:py-10 px-4 lg:px-12 gold-mesh-bg">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="gold-line" />
-            <span className="text-xs uppercase tracking-[0.25em] text-gold-400">
-              {CONTACT_DATA.badge}
-            </span>
-            <div className="gold-line" />
-          </div>
-          <h2 className="font-display text-5xl lg:text-6xl font-light dark:text-stone-100 text-stone-900 mb-8 leading-tight">
-            {CONTACT_DATA.mainHeading.line1}{" "}
-            <span className="italic" style={{ color: "var(--gold)" }}>
-              {CONTACT_DATA.mainHeading.italicText}
-            </span>
-          </h2>
-          <p className="dark:text-stone-400 text-stone-600 text-lg max-w-2xl mx-auto font-light">
-            {CONTACT_DATA.subtitle}
-          </p>
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left: contact info */}
           <Reveal>

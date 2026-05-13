@@ -1,4 +1,4 @@
-import ContactSection from "../components/HomePage/ContactSection";
+import ContactSection from "../components/ContactSection";
 import PageHeroSection from "../components/PageHeroSection";
 import ContactHeroImage from "../assets/contact.avif";
 
