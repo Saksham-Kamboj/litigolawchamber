@@ -11,8 +11,8 @@ export default function KnowledgeGateway() {
         title="Knowledge Gateway"
         subtitle="Stay updated with the latest legal insights"
       />
-      <ArticleSection />
       <NewsSection />
+      <ArticleSection />
     </div>
   );
 }

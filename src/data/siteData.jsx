@@ -311,6 +311,120 @@ export const STRENGTHS = [
   "Commitment to client's solace & satisfaction",
 ];
 
+export const KNOWLEDGE_GATEWAY = {
+  articles: {
+    badge: "Legal Insights",
+    heading: {
+      line1: "Featured",
+      line2: "Articles",
+      italicText: "Articles",
+    },
+    items: [
+      {
+        id: 1,
+        category: "Constitutional Law",
+        title: "Understanding Writ Jurisdiction Under Article 226",
+        excerpt:
+          "An in-depth look at the scope and limitations of High Court writ jurisdiction, covering the five types of writs and their practical application in protecting fundamental rights.",
+        author: "Naman Kamboj",
+        date: "April 28, 2025",
+        readTime: "8 min read",
+        featured: true,
+      },
+      {
+        id: 2,
+        category: "Corporate Law",
+        title:
+          "Debt Recovery Tribunals: A Practical Guide for Financial Institutions",
+        excerpt:
+          "Navigating the DRT process — from filing an original application to enforcement of recovery certificates — with key procedural insights for banks and NBFCs.",
+        author: "Narendra Singh",
+        date: "March 15, 2025",
+        readTime: "6 min read",
+        featured: false,
+      },
+      {
+        id: 3,
+        category: "Intellectual Property",
+        title: "Trademark Infringement in the Digital Age",
+        excerpt:
+          "How Indian courts are evolving their approach to online trademark disputes, domain name conflicts, and the growing challenge of counterfeit goods on e-commerce platforms.",
+        author: "Prasanna Karnatak",
+        date: "February 10, 2025",
+        readTime: "5 min read",
+        featured: false,
+      },
+      {
+        id: 4,
+        category: "Criminal Law",
+        title: "Bail Jurisprudence: Recent Supreme Court Directions",
+        excerpt:
+          "A comprehensive analysis of the Supreme Court's recent pronouncements on bail, the principle of 'bail is the rule, jail is the exception', and its impact on trial courts.",
+        author: "Naman Kamboj",
+        date: "January 22, 2025",
+        readTime: "7 min read",
+        featured: false,
+      },
+    ],
+  },
+
+  news: {
+    badge: "Latest Updates",
+    heading: {
+      line1: "Legal",
+      line2: "News & Updates",
+      italicText: "News & Updates",
+    },
+    items: [
+      {
+        id: 1,
+        tag: "Supreme Court",
+        title:
+          "SC Reaffirms Right to Privacy as Fundamental Right in Data Protection Context",
+        date: "May 5, 2025",
+        summary:
+          "The Supreme Court bench reiterated that the right to privacy under Article 21 extends to digital data, setting a significant precedent for the implementation of the Digital Personal Data Protection Act.",
+      },
+      {
+        id: 2,
+        tag: "High Court",
+        title:
+          "Uttarakhand HC Issues Guidelines on Environmental Clearances for Hill Projects",
+        date: "April 18, 2025",
+        summary:
+          "The Uttarakhand High Court issued comprehensive guidelines mandating stricter environmental impact assessments for construction projects in ecologically sensitive zones.",
+      },
+      {
+        id: 3,
+        tag: "Legislation",
+        title:
+          "Bharatiya Nyaya Sanhita: Key Changes from IPC and Their Practical Implications",
+        date: "March 30, 2025",
+        summary:
+          "With the BNS now in force, practitioners must adapt to revised section numbers, new offences, and modified sentencing guidelines that replace the century-old Indian Penal Code.",
+      },
+      {
+        id: 4,
+        tag: "Arbitration",
+        title:
+          "India Climbs Global Arbitration Rankings as MCIA Gains International Recognition",
+        date: "March 12, 2025",
+        summary:
+          "The Mumbai Centre for International Arbitration has been recognized among the top arbitral institutions globally, reflecting India's growing stature as an arbitration-friendly jurisdiction.",
+      },
+      {
+        id: 5,
+        tag: "Consumer Law",
+        title:
+          "NCDRC Strengthens E-Commerce Consumer Protections with Landmark Order",
+        date: "February 25, 2025",
+        summary:
+          "The National Consumer Disputes Redressal Commission held major e-commerce platforms jointly liable with sellers for defective products, significantly expanding consumer remedies.",
+      },
+    ],
+  },
+};
+
 export const DISCLAIMER_CONTENT = {
   firmName: "LLC",
   title: "Legal Disclaimer",
